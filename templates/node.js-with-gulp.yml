@@ -15,8 +15,11 @@ steps:
     versionSpec: '10.x'
   displayName: 'Install Node.js'
 
-- script: |
-    npm install
-    gulp default --gulpfile gulpfile.js
+- script: npm install
   workingDirectory: samples/node-js-with-gulp
-  displayName: 'npm install and run gulp'
+  displayName: 'npm install'
+
+- task: Gulp@1
+  inputs:
+    gulpFile: samples/node-js-with-gulp/gulpfile.js
+    workingDirectory: samples/node-js-with-gulp
