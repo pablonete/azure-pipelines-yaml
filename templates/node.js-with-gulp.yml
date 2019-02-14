@@ -19,7 +19,7 @@ steps:
   workingDirectory: samples/node-js-with-gulp
   displayName: 'npm install'
 
-- task: Gulp@1
+- task: Gulp@0
   inputs:
     gulpFile: samples/node-js-with-gulp/gulpfile.js
     workingDirectory: samples/node-js-with-gulp
